@@ -1,0 +1,17 @@
+library(twilio)
+
+Sys.setenv(TWILIO_SID="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+Sys.setenv(TWILIO_TOKEN="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+Sys.setenv(to_number="XXXXXXXXXXXXXXXX")
+Sys.setenv(from_number="XXXXXXXXXXXXXXXX")
+
+send_message <- function(message_body){
+  tw_send_message(
+    to=to_number,
+    from=from_number,
+    body=message_body
+  )
+}
+
+send_message(message_body=paste("Operation complete", Sys.time(), "Operation took", stop_time-start_time))
+
