@@ -1,3 +1,3 @@
 # twilio 
 
-Codes to send text message when operation is complete. 
+Script to send text message when operation is complete. 
